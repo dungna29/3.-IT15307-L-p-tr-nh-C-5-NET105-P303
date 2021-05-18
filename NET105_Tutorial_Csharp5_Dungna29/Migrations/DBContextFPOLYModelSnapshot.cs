@@ -270,6 +270,414 @@ namespace NET105_Tutorial_Csharp5_Dungna29.Migrations
                     b.ToTable("Country");
                 });
 
+            modelBuilder.Entity("NET105_Tutorial_Csharp5_Dungna29.Models.FluentApi_Model.FCart", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:IdentityIncrement", 1)
+                        .HasAnnotation("SqlServer:IdentitySeed", 1)
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("FCarts");
+                });
+
+            modelBuilder.Entity("NET105_Tutorial_Csharp5_Dungna29.Models.FluentApi_Model.FCategory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:IdentityIncrement", 1)
+                        .HasAnnotation("SqlServer:IdentitySeed", 1)
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("IsShowOnHome")
+                        .HasColumnType("bit");
+
+                    b.Property<int?>("ParentId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SortOrder")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Status")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(1);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("FCategories");
+                });
+
+            modelBuilder.Entity("NET105_Tutorial_Csharp5_Dungna29.Models.FluentApi_Model.FCategoryTranslation", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:IdentityIncrement", 1)
+                        .HasAnnotation("SqlServer:IdentitySeed", 1)
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("LanguageId")
+                        .IsRequired()
+                        .HasMaxLength(5)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(5)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("SeoAlias")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("SeoDescription")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("SeoTitle")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CategoryId");
+
+                    b.HasIndex("LanguageId");
+
+                    b.ToTable("FCategoryTranslations");
+                });
+
+            modelBuilder.Entity("NET105_Tutorial_Csharp5_Dungna29.Models.FluentApi_Model.FContact", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:IdentityIncrement", 1)
+                        .HasAnnotation("SqlServer:IdentitySeed", 1)
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("Message")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("FContacts");
+                });
+
+            modelBuilder.Entity("NET105_Tutorial_Csharp5_Dungna29.Models.FluentApi_Model.FLanguage", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasMaxLength(5)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(5)");
+
+                    b.Property<bool>("IsDefault")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("FLanguages");
+                });
+
+            modelBuilder.Entity("NET105_Tutorial_Csharp5_Dungna29.Models.FluentApi_Model.FOrder", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:IdentityIncrement", 1)
+                        .HasAnnotation("SqlServer:IdentitySeed", 1)
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("OrderDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValue(new DateTime(2021, 5, 17, 0, 35, 52, 654, DateTimeKind.Local).AddTicks(6120));
+
+                    b.Property<string>("ShipAddress")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("ShipEmail")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(50)");
+
+                    b.Property<string>("ShipName")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("ShipPhoneNumber")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("FOrders");
+                });
+
+            modelBuilder.Entity("NET105_Tutorial_Csharp5_Dungna29.Models.FluentApi_Model.FOrderDetail", b =>
+                {
+                    b.Property<int>("OrderId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.HasKey("OrderId", "ProductId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("FOrderDetails");
+                });
+
+            modelBuilder.Entity("NET105_Tutorial_Csharp5_Dungna29.Models.FluentApi_Model.FProduct", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:IdentityIncrement", 1)
+                        .HasAnnotation("SqlServer:IdentitySeed", 1)
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal>("OriginalPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("SeoAlias")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Stock")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(0);
+
+                    b.Property<int>("ViewCount")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(0);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("FProducts");
+                });
+
+            modelBuilder.Entity("NET105_Tutorial_Csharp5_Dungna29.Models.FluentApi_Model.FProductInCategory", b =>
+                {
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.HasKey("CategoryId", "ProductId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("FProductInCategories");
+                });
+
+            modelBuilder.Entity("NET105_Tutorial_Csharp5_Dungna29.Models.FluentApi_Model.FProductTranslation", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:IdentityIncrement", 1)
+                        .HasAnnotation("SqlServer:IdentitySeed", 1)
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Details")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("LanguageId")
+                        .IsRequired()
+                        .HasMaxLength(5)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(5)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("SeoAlias")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("SeoDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SeoTitle")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LanguageId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("FProductTranslations");
+                });
+
+            modelBuilder.Entity("NET105_Tutorial_Csharp5_Dungna29.Models.FluentApi_Model.FPromotion", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:IdentityIncrement", 1)
+                        .HasAnnotation("SqlServer:IdentitySeed", 1)
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("ApplyForAll")
+                        .HasColumnType("bit");
+
+                    b.Property<decimal?>("DiscountAmount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int?>("DiscountPercent")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("FromDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProductCategoryIds")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProductIds")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("ToDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("FPromotions");
+                });
+
+            modelBuilder.Entity("NET105_Tutorial_Csharp5_Dungna29.Models.FluentApi_Model.FTransaction", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:IdentityIncrement", 1)
+                        .HasAnnotation("SqlServer:IdentitySeed", 1)
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<decimal>("Amount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("ExternalTransactionId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Fee")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("Message")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Provider")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Result")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("TransactionDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("FTransactions");
+                });
+
             modelBuilder.Entity("NET105_Tutorial_Csharp5_Dungna29.Models.Product", b =>
                 {
                     b.Property<int>("ProductId")
@@ -378,6 +786,93 @@ namespace NET105_Tutorial_Csharp5_Dungna29.Migrations
                     b.Navigation("Student");
                 });
 
+            modelBuilder.Entity("NET105_Tutorial_Csharp5_Dungna29.Models.FluentApi_Model.FCart", b =>
+                {
+                    b.HasOne("NET105_Tutorial_Csharp5_Dungna29.Models.FluentApi_Model.FProduct", "FProduct")
+                        .WithMany("Carts")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("FProduct");
+                });
+
+            modelBuilder.Entity("NET105_Tutorial_Csharp5_Dungna29.Models.FluentApi_Model.FCategoryTranslation", b =>
+                {
+                    b.HasOne("NET105_Tutorial_Csharp5_Dungna29.Models.FluentApi_Model.FCategory", "Category")
+                        .WithMany("CategoryTranslations")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("NET105_Tutorial_Csharp5_Dungna29.Models.FluentApi_Model.FLanguage", "Language")
+                        .WithMany("CategoryTranslations")
+                        .HasForeignKey("LanguageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
+
+                    b.Navigation("Language");
+                });
+
+            modelBuilder.Entity("NET105_Tutorial_Csharp5_Dungna29.Models.FluentApi_Model.FOrderDetail", b =>
+                {
+                    b.HasOne("NET105_Tutorial_Csharp5_Dungna29.Models.FluentApi_Model.FOrder", "Order")
+                        .WithMany("OrderDetails")
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("NET105_Tutorial_Csharp5_Dungna29.Models.FluentApi_Model.FProduct", "Product")
+                        .WithMany("OrderDetails")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Order");
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("NET105_Tutorial_Csharp5_Dungna29.Models.FluentApi_Model.FProductInCategory", b =>
+                {
+                    b.HasOne("NET105_Tutorial_Csharp5_Dungna29.Models.FluentApi_Model.FCategory", "Category")
+                        .WithMany("ProductInCategories")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("NET105_Tutorial_Csharp5_Dungna29.Models.FluentApi_Model.FProduct", "Product")
+                        .WithMany("ProductInCategories")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("NET105_Tutorial_Csharp5_Dungna29.Models.FluentApi_Model.FProductTranslation", b =>
+                {
+                    b.HasOne("NET105_Tutorial_Csharp5_Dungna29.Models.FluentApi_Model.FLanguage", "Language")
+                        .WithMany("ProductTranslations")
+                        .HasForeignKey("LanguageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("NET105_Tutorial_Csharp5_Dungna29.Models.FluentApi_Model.FProduct", "Product")
+                        .WithMany("ProductTranslations")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Language");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("NET105_Tutorial_Csharp5_Dungna29.Models.Product", b =>
                 {
                     b.HasOne("NET105_Tutorial_Csharp5_Dungna29.Models.Category", "Category")
@@ -430,6 +925,36 @@ namespace NET105_Tutorial_Csharp5_Dungna29.Migrations
             modelBuilder.Entity("NET105_Tutorial_Csharp5_Dungna29.Models.Convention.Student", b =>
                 {
                     b.Navigation("Address");
+                });
+
+            modelBuilder.Entity("NET105_Tutorial_Csharp5_Dungna29.Models.FluentApi_Model.FCategory", b =>
+                {
+                    b.Navigation("CategoryTranslations");
+
+                    b.Navigation("ProductInCategories");
+                });
+
+            modelBuilder.Entity("NET105_Tutorial_Csharp5_Dungna29.Models.FluentApi_Model.FLanguage", b =>
+                {
+                    b.Navigation("CategoryTranslations");
+
+                    b.Navigation("ProductTranslations");
+                });
+
+            modelBuilder.Entity("NET105_Tutorial_Csharp5_Dungna29.Models.FluentApi_Model.FOrder", b =>
+                {
+                    b.Navigation("OrderDetails");
+                });
+
+            modelBuilder.Entity("NET105_Tutorial_Csharp5_Dungna29.Models.FluentApi_Model.FProduct", b =>
+                {
+                    b.Navigation("Carts");
+
+                    b.Navigation("OrderDetails");
+
+                    b.Navigation("ProductInCategories");
+
+                    b.Navigation("ProductTranslations");
                 });
 #pragma warning restore 612, 618
         }

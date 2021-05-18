@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Google Driver Dungna29FPT\\8. Demo\\Demo C#5\\NET105_Tutorial_Csharp5\\NET105_Tutorial_Csharp5\\NET105_Tutorial_Csharp5_Dungna29\\NET105_Tutorial_Csharp5_Dungna29.csproj": {}
+    "F:\\Google Driver Dungna29FPT\\8. Demo\\Demo C#5\\SM21_Block1\\3.-IT15307-L-p-tr-nh-C-5-NET105-P303\\NET105_Tutorial_Csharp5_Dungna29\\NET105_Tutorial_Csharp5_Dungna29.csproj": {}
   },
   "projects": {
-    "F:\\Google Driver Dungna29FPT\\8. Demo\\Demo C#5\\NET105_Tutorial_Csharp5\\NET105_Tutorial_Csharp5\\NET105_Tutorial_Csharp5_Dungna29\\NET105_Tutorial_Csharp5_Dungna29.csproj": {
+    "F:\\Google Driver Dungna29FPT\\8. Demo\\Demo C#5\\SM21_Block1\\3.-IT15307-L-p-tr-nh-C-5-NET105-P303\\NET105_Tutorial_Csharp5_Dungna29\\NET105_Tutorial_Csharp5_Dungna29.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Google Driver Dungna29FPT\\8. Demo\\Demo C#5\\NET105_Tutorial_Csharp5\\NET105_Tutorial_Csharp5\\NET105_Tutorial_Csharp5_Dungna29\\NET105_Tutorial_Csharp5_Dungna29.csproj",
+        "projectUniqueName": "F:\\Google Driver Dungna29FPT\\8. Demo\\Demo C#5\\SM21_Block1\\3.-IT15307-L-p-tr-nh-C-5-NET105-P303\\NET105_Tutorial_Csharp5_Dungna29\\NET105_Tutorial_Csharp5_Dungna29.csproj",
         "projectName": "NET105_Tutorial_Csharp5_Dungna29",
-        "projectPath": "F:\\Google Driver Dungna29FPT\\8. Demo\\Demo C#5\\NET105_Tutorial_Csharp5\\NET105_Tutorial_Csharp5\\NET105_Tutorial_Csharp5_Dungna29\\NET105_Tutorial_Csharp5_Dungna29.csproj",
+        "projectPath": "F:\\Google Driver Dungna29FPT\\8. Demo\\Demo C#5\\SM21_Block1\\3.-IT15307-L-p-tr-nh-C-5-NET105-P303\\NET105_Tutorial_Csharp5_Dungna29\\NET105_Tutorial_Csharp5_Dungna29.csproj",
         "packagesPath": "C:\\Users\\DungNAPC\\.nuget\\packages\\",
-        "outputPath": "F:\\Google Driver Dungna29FPT\\8. Demo\\Demo C#5\\NET105_Tutorial_Csharp5\\NET105_Tutorial_Csharp5\\NET105_Tutorial_Csharp5_Dungna29\\obj\\",
+        "outputPath": "F:\\Google Driver Dungna29FPT\\8. Demo\\Demo C#5\\SM21_Block1\\3.-IT15307-L-p-tr-nh-C-5-NET105-P303\\NET105_Tutorial_Csharp5_Dungna29\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DungNAPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
