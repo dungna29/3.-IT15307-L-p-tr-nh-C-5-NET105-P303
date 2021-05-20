@@ -60,7 +60,7 @@ namespace NET105_Tutorial_Csharp5_Dungna29
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Student}/{action=Create}/{id?}");
             });
         }
     }
