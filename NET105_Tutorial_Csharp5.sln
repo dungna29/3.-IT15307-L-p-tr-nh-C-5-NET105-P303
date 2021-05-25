@@ -9,7 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FPT_POLY_CHSARP5.Data", "FP
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FPT_POLY_CHSARP5.WebApp", "FPT_POLY_CHSARP5.WebApp\FPT_POLY_CHSARP5.WebApp.csproj", "{765603FD-3ACC-4779-835A-97EC20E5D774}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NET105_Tutorial_Data_Validation", "NET105_Tutorial_Data_Validation\NET105_Tutorial_Data_Validation.csproj", "{9A531926-3C01-4D0A-9811-7E858048AF83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NET105_Tutorial_Data_Validation", "NET105_Tutorial_Data_Validation\NET105_Tutorial_Data_Validation.csproj", "{9A531926-3C01-4D0A-9811-7E858048AF83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NET105_Tutorial_DI_DepedencyInjection", "NET105_Tutorial_DI_DepedencyInjection\NET105_Tutorial_DI_DepedencyInjection.csproj", "{9F2249AF-D9E2-4055-86F7-2D3995936B9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NET105_Tutorial_DI_DepedencyInjection.Services", "NET105_Tutorial_DI_DepedencyInjection.Services\NET105_Tutorial_DI_DepedencyInjection.Services.csproj", "{E9CCB938-F917-4BEB-BBFE-6C42BF01E2FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NET105_Tutorial_DI_DepedencyInjection_Lifetime", "NET105_Tutorial_DI_DepedencyInjection_Lifetime\NET105_Tutorial_DI_DepedencyInjection_Lifetime.csproj", "{67BD3253-DABD-4F3D-865C-D8FF3AC085B4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +39,18 @@ Global
 		{9A531926-3C01-4D0A-9811-7E858048AF83}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A531926-3C01-4D0A-9811-7E858048AF83}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A531926-3C01-4D0A-9811-7E858048AF83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F2249AF-D9E2-4055-86F7-2D3995936B9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F2249AF-D9E2-4055-86F7-2D3995936B9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F2249AF-D9E2-4055-86F7-2D3995936B9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F2249AF-D9E2-4055-86F7-2D3995936B9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9CCB938-F917-4BEB-BBFE-6C42BF01E2FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9CCB938-F917-4BEB-BBFE-6C42BF01E2FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9CCB938-F917-4BEB-BBFE-6C42BF01E2FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9CCB938-F917-4BEB-BBFE-6C42BF01E2FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67BD3253-DABD-4F3D-865C-D8FF3AC085B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67BD3253-DABD-4F3D-865C-D8FF3AC085B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67BD3253-DABD-4F3D-865C-D8FF3AC085B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67BD3253-DABD-4F3D-865C-D8FF3AC085B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

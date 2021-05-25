@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "NET105_Tutorial_DI_DepedencyInjection.Services/1.0.0": {
+        "runtime": {
+          "NET105_Tutorial_DI_DepedencyInjection.Services.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "NET105_Tutorial_DI_DepedencyInjection.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
