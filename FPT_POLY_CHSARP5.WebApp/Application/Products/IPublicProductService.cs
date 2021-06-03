@@ -10,6 +10,6 @@ namespace FPT_POLY_CHSARP5.WebApp.Application.Products
     //Chức năng cho end-user
     public class IPublicProductService
     {
-        public PageViewModel<ProductViewModel> GetAllByCaterogyId(int categoryId,int pageIndex, int pageSize);
+        // public PageViewModel<ProductViewModel> GetAllByCaterogyId(int categoryId,int pageIndex, int pageSize);
     }
 }

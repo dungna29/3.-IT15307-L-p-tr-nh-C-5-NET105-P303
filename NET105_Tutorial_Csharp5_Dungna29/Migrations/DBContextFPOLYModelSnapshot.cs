@@ -442,7 +442,7 @@ namespace NET105_Tutorial_Csharp5_Dungna29.Migrations
                     b.Property<DateTime>("OrderDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2021, 5, 17, 0, 35, 52, 654, DateTimeKind.Local).AddTicks(6120));
+                        .HasDefaultValue(new DateTime(2021, 5, 27, 12, 45, 16, 608, DateTimeKind.Local).AddTicks(8179));
 
                     b.Property<string>("ShipAddress")
                         .IsRequired()

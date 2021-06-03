@@ -11,11 +11,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FPT_POLY_CHSARP5.WebApp", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NET105_Tutorial_Data_Validation", "NET105_Tutorial_Data_Validation\NET105_Tutorial_Data_Validation.csproj", "{9A531926-3C01-4D0A-9811-7E858048AF83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NET105_Tutorial_DI_DepedencyInjection", "NET105_Tutorial_DI_DepedencyInjection\NET105_Tutorial_DI_DepedencyInjection.csproj", "{9F2249AF-D9E2-4055-86F7-2D3995936B9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NET105_Tutorial_DI_DepedencyInjection", "NET105_Tutorial_DI_DepedencyInjection\NET105_Tutorial_DI_DepedencyInjection.csproj", "{9F2249AF-D9E2-4055-86F7-2D3995936B9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NET105_Tutorial_DI_DepedencyInjection.Services", "NET105_Tutorial_DI_DepedencyInjection.Services\NET105_Tutorial_DI_DepedencyInjection.Services.csproj", "{E9CCB938-F917-4BEB-BBFE-6C42BF01E2FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NET105_Tutorial_DI_DepedencyInjection.Services", "NET105_Tutorial_DI_DepedencyInjection.Services\NET105_Tutorial_DI_DepedencyInjection.Services.csproj", "{E9CCB938-F917-4BEB-BBFE-6C42BF01E2FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NET105_Tutorial_DI_DepedencyInjection_Lifetime", "NET105_Tutorial_DI_DepedencyInjection_Lifetime\NET105_Tutorial_DI_DepedencyInjection_Lifetime.csproj", "{67BD3253-DABD-4F3D-865C-D8FF3AC085B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NET105_Tutorial_DI_DepedencyInjection_Lifetime", "NET105_Tutorial_DI_DepedencyInjection_Lifetime\NET105_Tutorial_DI_DepedencyInjection_Lifetime.csproj", "{67BD3253-DABD-4F3D-865C-D8FF3AC085B4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NET105_Tutorial_Identity", "NET105_Tutorial_Identity\NET105_Tutorial_Identity.csproj", "{50EAD7EB-6242-404A-8C8B-601398148C4A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NET105_Tutorial_Identity2", "NET105_Tutorial_Identity2\NET105_Tutorial_Identity2.csproj", "{13FB753F-3EFF-4B39-8239-D839260C9F5F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NET105_Tutorial_WebApi", "NET105_Tutorial_WebApi\NET105_Tutorial_WebApi.csproj", "{15BED705-3579-4083-A0D8-31D9EFD00CB3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +57,18 @@ Global
 		{67BD3253-DABD-4F3D-865C-D8FF3AC085B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67BD3253-DABD-4F3D-865C-D8FF3AC085B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67BD3253-DABD-4F3D-865C-D8FF3AC085B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50EAD7EB-6242-404A-8C8B-601398148C4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50EAD7EB-6242-404A-8C8B-601398148C4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50EAD7EB-6242-404A-8C8B-601398148C4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50EAD7EB-6242-404A-8C8B-601398148C4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13FB753F-3EFF-4B39-8239-D839260C9F5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13FB753F-3EFF-4B39-8239-D839260C9F5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13FB753F-3EFF-4B39-8239-D839260C9F5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13FB753F-3EFF-4B39-8239-D839260C9F5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15BED705-3579-4083-A0D8-31D9EFD00CB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15BED705-3579-4083-A0D8-31D9EFD00CB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15BED705-3579-4083-A0D8-31D9EFD00CB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15BED705-3579-4083-A0D8-31D9EFD00CB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
